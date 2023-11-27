@@ -8,6 +8,11 @@ class LiteraryFormat(models.Model):
         return self.name
 
 
+class Author(models.Model):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+
+
 class Book(models.Model):
     title = models.CharField(max_length=255)
     price = models.DecimalField(
@@ -19,6 +24,7 @@ class Book(models.Model):
         on_delete=models.CASCADE,
         related_name="books"
     )
+    authors = models.ManyToManyField(Author)
 
     def __str__(self):
         return f"{self.title} (price: {self.price}), format: {self.format.name}"
