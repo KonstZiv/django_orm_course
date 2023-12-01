@@ -1,3 +1,4 @@
+# https://django-extensions.readthedocs.io/en/latest/
 from django.db import models
 
 

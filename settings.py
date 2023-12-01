@@ -8,6 +8,7 @@ SECRET_KEY = "django-insecure-$hmx_!(29n^(dfjog4w(tpg+%^trtle8r7rvgrzpmro0zdg%du
 
 INSTALLED_APPS = [
     "db",
+    "django_extensions",
 ]
 
 # Database
